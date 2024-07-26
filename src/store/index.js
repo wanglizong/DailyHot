@@ -92,18 +92,7 @@ export const mainStore = defineStore("mainData", {
           order: 13,
           show: true,
         },
-        {
-          label: "原神",
-          name: "genshin",
-          order: 14,
-          show: true,
-        },
-        {
-          label: "崩坏：星穹铁道",
-          name: "starrail",
-          order: 16,
-          show: true,
-        },
+      
         {
           label: "LOL",
           name: "lol",
@@ -150,6 +139,18 @@ export const mainStore = defineStore("mainData", {
           label: "知乎日报",
           name: "zhihu-daily",
           order: 23,
+          show: true,
+        },
+        {
+          label: "原神",
+          name: "genshin",
+          order: 24,
+          show: true,
+        },
+        {
+          label: "崩坏：星穹铁道",
+          name: "starrail",
+          order: 25,
           show: true,
         },
       ],
