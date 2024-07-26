@@ -141,18 +141,18 @@ export const mainStore = defineStore("mainData", {
           order: 23,
           show: true,
         },
-        {
-          label: "原神",
-          name: "genshin",
-          order: 24,
-          show: true,
-        },
-        {
-          label: "崩坏：星穹铁道",
-          name: "starrail",
-          order: 25,
-          show: true,
-        },
+        // {
+        //   label: "原神",
+        //   name: "genshin",
+        //   order: 24,
+        //   show: true,
+        // },
+        // {
+        //   label: "崩坏：星穹铁道",
+        //   name: "starrail",
+        //   order: 25,
+        //   show: true,
+        // },
       ],
       newsArr: [],
       // 链接跳转方式
