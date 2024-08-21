@@ -27,6 +27,26 @@
         <n-space justify="end">
           <n-popover v-if="showRefresh">
             <template #trigger>
+              <n-button secondary strong round @click="goToJSONWebsite">
+                <template #icon>
+                  <n-icon :component="Tool" />
+                </template>
+              </n-button>
+            </template>
+            JSON 在线工具
+          </n-popover>
+          <n-popover v-if="showRefresh">
+            <template #trigger>
+              <n-button secondary strong round @click="goToGameNWebsite">
+                <template #icon>
+                  <n-icon :component="Gamepad" />
+                </template>
+              </n-button>
+            </template>
+            网页游戏
+          </n-popover>
+          <n-popover v-if="showRefresh">
+            <template #trigger>
               <n-button secondary strong round @click="router.go(0)">
                 <template #icon>
                   <n-icon :component="Refresh" />
@@ -94,6 +114,8 @@ import {
   Refresh,
   SettingTwo,
   HamburgerButton,
+  Tool,
+  Gamepad,
 } from "@icon-park/vue-next";
 import { getCurrentTime } from "@/utils/getTime.js";
 import { mainStore } from "@/store";
@@ -104,6 +126,8 @@ const router = useRouter();
 const store = mainStore();
 const timeInterval = ref(null);
 const showRefresh = ref(false);
+
+
 
 // 移动端时间模块
 const timeRender = () => {
@@ -214,6 +238,12 @@ onMounted(() => {
 onBeforeUnmount(() => {
   clearInterval(timeInterval.value);
 });
+const goToJSONWebsite= () => {
+  window.open('https://json.ittools.cc/', '_blank');
+};
+const goToGameNWebsite= () => {
+  window.open('https://game.ittools.cc/', '_blank');
+};
 </script>
 
 <style lang="scss" scoped>
